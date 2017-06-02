@@ -1108,7 +1108,7 @@ cpdefine("inline:com-chilipeppr-cpws-mao", ["chilipeppr_ready"], function() {
             // 3D Viewer
             // http://jsfiddle.net/chilipeppr/y3HRF
             console.log('WORKSPACE: loading 3d viewer');
-            chilipeppr.load("#com-chilipeppr-3dviewer-controller",
+            chilipeppr.load("#com-chilipeppr-3dviewer",
                 //"http://fiddle.jshell.net/chilipeppr/y3HRF/show/light/",
                 "http://raw.githubusercontent.com/chilipeppr/widget-3dviewer/master/auto-generated-widget.html",
 
@@ -1873,7 +1873,9 @@ cpdefine("inline:com-chilipeppr-cpws-mao", ["chilipeppr_ready"], function() {
                 <!-- Change the width by adjusting col-md-4 to be col-md-3 for skinnier, or col-md-5 for wider -->
                 <!-- You must have all columns add up to 12 since we use bootstrap's col-md technique, i.e. col-md-2, col-md-7, col-md-3 adds to 12 -->
                 <div class="col-md-4 col-pad10">
-
+                  <!-- 3D Viewer. Must be loaded at top to get z-orders correct -->
+                  <div id="com-chilipeppr-3dviewer">Load 3D Viewport Here</div>
+                  
                     <div id="com-chilipeppr-ws-gcode-hdr" class="com-chilipeppr-ws-hdr well">
 
                         Workspace for grbl 1.1j
@@ -1937,7 +1939,7 @@ cpdefine("inline:com-chilipeppr-cpws-mao", ["chilipeppr_ready"], function() {
                 <!-- 3D Viewer -->
                 <div class="widget col-md-5">
                     <div class="">
-                        <div id="com-chilipeppr-3dviewer-controller" style=""></div>
+                        <div id="com-chilipeppr-3dviewer" style=""></div>
                     </div>
                 </div>
 
