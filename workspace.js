@@ -1016,7 +1016,7 @@ cpdefine("inline:com-chilipeppr-cpws-mao", ["chilipeppr_ready"], function() {
             // 3D Viewer
             // http://jsfiddle.net/chilipeppr/y3HRF
             console.log('WORKSPACE: loading 3d viewer');
-            chilipeppr.load("#com-chilipeppr-3dviewer",
+            chilipeppr.load("#com-chilipeppr-3dviewer-controller",
                 //"http://fiddle.jshell.net/chilipeppr/y3HRF/show/light/",
                 "http://raw.githubusercontent.com/chilipeppr/widget-3dviewer/master/auto-generated-widget.html",
 
