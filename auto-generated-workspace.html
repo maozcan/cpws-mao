@@ -1861,25 +1861,19 @@ cpdefine("inline:com-chilipeppr-cpws-mao", ["chilipeppr_ready"], function() {
 </head>
 
 <body>
-
-    <div id="com-chilipeppr-widget-flash-instance"></div>
-
-    <div id="com-chilipeppr-cpws-mao" class="xhidden">
-
+    <!-- This is the workspace layout for the GRBL Workspace -->
+    <div id="com-chilipeppr-ws-gcode-wrapper" class="dropArea">
+        <div id="com-chilipeppr-ws-gcode-dragdropoverlay" class="hidden">
+            <div class="well">Drag and Drop Gcode Files Onto Browser Window</div>
+        </div>
         <div class="container-fluid">
             <div class="row">
-
-                <!-- Left Column -->
-                <!-- Change the width by adjusting col-md-4 to be col-md-3 for skinnier, or col-md-5 for wider -->
-                <!-- You must have all columns add up to 12 since we use bootstrap's col-md technique, i.e. col-md-2, col-md-7, col-md-3 adds to 12 -->
-                <div class="col-md-4 col-pad10">
-                  <!-- 3D Viewer. Must be loaded at top to get z-orders correct -->
-                  <div id="com-chilipeppr-3dviewer">Load 3D Viewport Here</div>
-
-                    <div id="com-chilipeppr-ws-gcode-hdr" class="com-chilipeppr-ws-hdr well">
-
-                        Workspace for grbl 1.1j
-
+                <div class="col-xs-3 widgetx padrt left">
+                    <!-- 3D Viewer. Must be loaded at top to get z-orders correct -->
+                    <div id="com-chilipeppr-3dviewer">Load 3D Viewport Here</div>
+                    <!-- Workspace Hdr -->
+                    <div id="com-chilipeppr-ws-gcode-hdr" class="com-chilipeppr-ws-hdr zhigh well">
+                        GRBL Workspace
                         <div id="com-chilipeppr-ws-gcode-menu" class="">
 
 
@@ -1916,9 +1910,7 @@ cpdefine("inline:com-chilipeppr-cpws-mao", ["chilipeppr_ready"], function() {
                                 </ul>
                             </div>
                         </div>
-
                     </div>
-
                     <div class="zhigh hidden" id="com-chilipeppr-ws-zipwhip"></div>
                     <div class="zhigh hidden" id="com-chilipeppr-ws-autolevel">Auto-Level Here</div>
                     <div class="zhigh hidden" id="com-chilipeppr-ws-macro">Macro Here</div>
@@ -1930,55 +1922,23 @@ cpdefine("inline:com-chilipeppr-cpws-mao", ["chilipeppr_ready"], function() {
                     <div id="com-chilipeppr-gcode-list" class="zhigh">Load Gcode List Here</div>
                     <div id="com-chilipeppr-serialport-log" class="zhigh">Load Serial Port Log Here</div>
 
-
-                    <div id="com-chilipeppr-widget-spconsole-instance">
-                        Serial Port Console goes here.
-                    </div>
-
                 </div>
-                <!-- 3D Viewer -->
-                <div class="widget col-md-5">
+                <div class="widget col-xs-6">
                     <div class="">
-                        <div id="com-chilipeppr-3dviewer-controller" style=""></div>
+                        <div id="com-chilipeppr-3dviewer-controlpanel" style=""></div>
                     </div>
                 </div>
-
-                <!-- Right Column -->
-                <div class="col-md-3 col-pad10">
-                  <!-- XYZ -->
-                  <div id="com-chilipeppr-xyz-instance" class="">Load XYZ Here</div>
-                  <!-- grbl -->
-                  <div id="com-chilipeppr-widget-grbl-instance" class="">Load GRBL Here</div>
-                  <!-- WebRTC Client -->
-                  <!--<div id="com-chilipeppr-webrtcclient" class="">Load WebRTC Client Here</div>-->
-                  <!-- Serial Port Selector -->
-                  <div id="com-chilipeppr-serialport-spselector" class="">Load Serial Port Selector Here</div>
-
+                <div class="col-xs-3 nopadding">
+                    <!-- XYZ -->
+                    <div id="com-chilipeppr-xyz-instance" class="">Load XYZ Here</div>
+                    <!-- Tinyg -->
+                    <div id="com-chilipeppr-widget-grbl-instance" class="">Load GRBL Here</div>
+                    <!-- WebRTC Client -->
+                    <!--<div id="com-chilipeppr-webrtcclient" class="">Load WebRTC Client Here</div>-->
+                    <!-- Serial Port Selector -->
+                    <div id="com-chilipeppr-serialport-spselector" class="">Load Serial Port Selector Here</div>
                 </div>
-
             </div>
-        </div>
-    </div>
-
-    <!-- Keep this div hidden so it can be cloned and used by the Javascript -->
-    <div id="com-chilipeppr-cpws-mao-billboard" class="hidden">
-        <div class="billboard-content">
-            <h4 class="billboard-title" style="">Workspace for grbl 1.1j</h4>
-
-            <p class="billboard-url" style=""><a href="http://chilipeppr.com/sample">chilipeppr.com/sample</a>
-
-            </p>
-            <div class="billboard-imgcontain" style="">
-                <a href="http://chilipeppr.com/sample">
-                    <div class="billboard-img" style="background-image: url('https://github.com/chilipeppr/workspace-sample/raw/master/billboard.png')" />
-                </a>
-                <div class="billboard-stats2">
-                </div>
-
-            </div>
-            <p class="billboard-desc">
-                A ChiliPeppr Workspace that lets you do stuff.
-            </p>
         </div>
     </div>
 
