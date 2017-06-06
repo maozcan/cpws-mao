@@ -1704,7 +1704,7 @@ cpdefine("inline:com-chilipeppr-cpws-mao", ["chilipeppr_ready"], function() {
 
             chilipeppr.load(
                 "#com-chilipeppr-widget-grbl-instance",
-                "http://raw.githubusercontent.com/jpadie/grbl1-test-widget/master/auto-generated-widget.html",
+                "http://raw.githubusercontent.com/maozcan/grbl1-test-widget/master/auto-generated-widget.html",
 
                 function() {
                     cprequire(
